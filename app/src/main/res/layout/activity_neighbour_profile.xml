@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/activity_neighbour_profile"
+    tools:context=".ui.neighbour_list.NeighbourProfileActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+    <RelativeLayout
+        android:id="@+id/app"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="#B1C8C2">
+
+        <ImageView
+            android:id="@+id/item_profile_avatar"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:scaleType="centerCrop">
+        </ImageView>
+        <TextView
+            android:id="@+id/username"
+            android:text="Username"
+            android:layout_alignBottom="@+id/item_profile_avatar"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textStyle="bold"
+            android:textSize="25dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="#ffff"/>
+
+        <ImageButton
+            android:id="@+id/return_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/transparent"
+            app:srcCompat="@drawable/ic_return_button_24"></ImageButton>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/favorite_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_yellow_favorite_24"
+            android:backgroundTint="#FFFF"
+            android:layout_alignBottom="@+id/item_profile_avatar"
+            android:layout_alignEnd="@+id/item_profile_avatar"
+            android:layout_marginBottom="-30dp"
+            android:layout_marginEnd="30dp">
+        </android.support.design.widget.FloatingActionButton>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/Information"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            app:cardBackgroundColor="#ffffff"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/item_profile_avatar">
+            <RelativeLayout
+                android:id="@+id/info_card"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/user_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:text="Username" />
+
+            <ImageButton
+                android:id="@+id/location_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/user_info"
+                android:backgroundTint="@android:color/transparent"
+                app:srcCompat="@drawable/ic_location_24" />
+
+                <TextView
+                    android:id="@+id/location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/user_info"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/location_button"
+                    android:text="Location" />
+
+                <ImageButton
+                android:id="@+id/phone_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/location_button"
+                app:srcCompat="@drawable/ic_phone_24"
+                android:backgroundTint="@android:color/transparent"/>
+            <TextView
+                android:id="@+id/phone_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/location"
+                android:layout_toRightOf="@+id/phone_button"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="20dp"
+                android:text="0123456789"/>
+            <ImageButton
+                android:id="@+id/facebook_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/phone_button"
+                app:srcCompat="@drawable/ic_baseline_facebook_24"
+                android:backgroundTint="@android:color/transparent"/>
+            <TextView
+                android:id="@+id/facebook_link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/phone_number"
+                android:layout_toRightOf="@+id/facebook_button"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="25dp"
+                android:text="facebook url"/>
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/aboutMe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            app:cardBackgroundColor="#ffffff"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@+id/Information">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/about_card">
+            <TextView
+                android:id="@+id/aboutMe_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="-10dp"
+                android:layout_marginTop="15dp"
+                android:text="A propos de moi"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/aboutMe_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_below="@+id/aboutMe_title"
+                android:text="prensentation txt"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"/>
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

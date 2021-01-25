@@ -86,26 +86,26 @@ public class NeighboursListTest {
     }
 
     @Test
-    public void myFavoritesNeighbourList_shouldHadOnlyFavorites(){
-        onView(withId(R.id.list_favorite)).check(withItemCount(0));
-        onView(withId(R.id.list_neighbours))
-                .perform(click());
-        onView(withId(R.id.favorite_button))
-                .perform(click());
-        onView((withId(R.id.return_button))).perform(click());
-        onView((withId(R.id.list_favorite)))
-                .check(withItemCount(1));
-    }
-
-    @Test
     public void myNeighbourList_shouldOpenProfile(){
-        onView(withId(R.id.list_neighbours)).perform(click());
+        onView(withId(R.id.list_neighbours)).perform(RecyclerViewActions.actionOnItemAtPosition(3, click()));
         onView(withId(R.id.activity_neighbour_profile)).check(matches(isDisplayed()));
     }
 
     @Test
     public void myNeighbourProfile_shouldDisplayName(){
-        onView((withId(R.id.list_neighbours))).perform(click());
-        onView(withId(R.id.username)).check(matches(isDisplayed()));
+        onView((withId(R.id.list_neighbours))).perform(RecyclerViewActions.actionOnItemAtPosition(0, click()));
+        onView(withId(R.id.username)).check(matches(withText("Caroline")));
+    }
+
+    @Test
+    public void myFavoritesNeighbourList_shouldHadOnlyFavorites(){
+        onView(withId(R.id.list_favorite)).check(withItemCount(0));
+        onView(withId(R.id.list_neighbours))
+                .perform(RecyclerViewActions.actionOnItemAtPosition(2, click()));
+        onView(withId(R.id.favorite_button))
+                .perform(click());
+        onView((withId(R.id.return_button))).perform(click());
+        onView((withId(R.id.list_favorite)))
+                .check(withItemCount(1));
     }
 }

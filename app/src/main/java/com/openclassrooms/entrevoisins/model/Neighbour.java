@@ -8,7 +8,6 @@ import java.util.Objects;
  */
 public class Neighbour implements Serializable {
 
-
     /**
      * Identifier
      */

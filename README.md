@@ -8,4 +8,4 @@ Le code Java des différents fichiers concernant le model et le controler se tro
 
 Les tests instrumentalisés écrits en Java se trouve dans le fichier NeighbourListTest se trouvant lui-même dans un dossier neighbour_list issue de la branche androidTest;
 
-Les tests unitaires écrits en Java se trouve dans le fichier NeighbourServiceTest dans le fichier issue de ma branche test;
+Les tests unitaires écrits en Java se trouve dans le fichier NeighbourServiceTest dans le fichier issue de la branche test;
